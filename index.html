@@ -1,21 +1,67 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Life</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .controls {
+            display: flex;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .buttons {
+            margin: 15px auto;
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buttons button {
+            font-size: 1.5rem;
+            padding: 5px 12px 5px 12px;
+        }
+
+        .points {
+            margin: 10px auto;
+            font-size: 1.5rem;
+            padding: 5px 25px 5px 25px;
+            border: 1px solid #000;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
-    <table id="table"></table>
-    <div class="panel">
-        <canvas id="canvas"></canvas>
-        <form action="#" class="panel-right">
-            <div id="buttons"></div>
-            <textarea name="text" id="info" cols="30" rows="10"></textarea>
-        </form>
+    <canvas id='canvas'></canvas>
+    <div class="controls">
+        <div class="buttons">
+            <button id="start">Старт</button>
+            <button id="stop">Стоп</button>
+        </div>
+<!--        <div class="buttons">-->
+<!--            <input type="radio" value="add" name="modeChange" checked >Добавить точку-->
+<!--            <input type="radio" value="remove"  name="modeChange">Стереть точку-->
+<!--            <input type="checkbox">Внести изменения-->
+<!--        </div>-->
     </div>
+    <div class="points">Число точек: <span id="countPoints">0</span></div>
 </div>
-<script src="js4.js"></script>
+<script src="js.js"></script>
 </body>
 </html>
